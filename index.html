@@ -1,0 +1,19 @@
+<!-- Import the component library -->
+<script type="module" src="https://googleapis.com"></script>
+
+<!-- The viewer tag -->
+<model-viewer 
+  src="./model/spybird.glb" 
+  ios-src="./model/spybird.usdz"
+  alt="A 3D model bird in AR" 
+  ar 
+  ar-modes="scene-viewer quick-look webxr" 
+  camera-controls 
+  shadow-intensity="1" 
+  auto-rotate>
+  
+  <!-- Optional: Custom AR Button -->
+  <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px;">
+      👋 View in your space
+  </button>
+</model-viewer>
