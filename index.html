@@ -1,10 +1,34 @@
-<!-- Import the component library -->
-<script type="module" src="https://googleapis.com"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D AR Model Viewer</title>
+    <!-- Import the model-viewer web component -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        model-viewer {
+            width: 100%;
+            height: 500px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
 
-<!-- The viewer tag -->
+    <!-- 
+      Attributes explained:
+      src: Path to your .glb file
+      ar: Enables AR mode
+      ar-modes: Specifies supported AR modes (WebXR, Scene Viewer for Android, Quick Look for iOS)
+      camera-controls: Allows user to rotate/zoom the model
+      auto-rotate: Automatically rotates the model
+    -->
 <model-viewer 
-  src="./model/spybird.glb" 
-  ios-src="./model/spybird.usdz"
+  src="https://iisxr.github.io/spybird/model/spybird.glb" 
+  animation-name="Animation-loop" 
+  autoplay 
+  ios-src="https://iisxr.github.io/spybird/model/spybird.usdz"
   alt="A 3D model bird in AR" 
   ar 
   ar-modes="scene-viewer quick-look webxr" 
@@ -17,3 +41,6 @@
       👋 View in your space
   </button>
 </model-viewer>
+
+</body>
+</html>
